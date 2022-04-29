@@ -1,6 +1,4 @@
 import { Flex, Circle, Box, Badge, useColorModeValue, Icon, chakra, Tooltip } from '@chakra-ui/react';
-// import { BsStar, BsStarFill, BsStarHalf } from 'react-icons/bs';
-// import { FiShoppingCart } from 'react-icons/fi';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 const data = {

@@ -19,8 +19,6 @@ import {
 import { getCookieParser } from 'next/dist/server/api-utils';
 
 import { useForm, SubmitHandler } from 'react-hook-form';
-// import { BsLock } from 'react-icons/bs';
-// import { FiLock, FiUserPlus } from 'react-icons/fi';
 import {ChatIcon,LockIcon,LinkIcon} from '@chakra-ui/icons'
 import { BASE_URL } from '../../constants/url';
 import { _axios } from '../../lib/axios';

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Flex, Text, IconButton, Divider, Avatar, Heading, useDisclosure, Button } from '@chakra-ui/react';
-// import { FiBookmark, FiMenu, FiHome, FiCalendar, FiUser, FiDollarSign, FiBriefcase, FiSettings } from 'react-icons/fi';
 import { QuestionIcon, ArrowRightIcon } from '@chakra-ui/icons';
 import NavItem from './NavItem';
 import { motion } from 'framer-motion';
