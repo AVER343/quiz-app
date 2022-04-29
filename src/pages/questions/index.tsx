@@ -61,9 +61,8 @@ function QuestionsPage(props: any) {
 	);
 }
 export async function getServerSideProps(context:any) {
-	const getQuestions = questions;
 	return {
-		props: { questions: getQuestions } // will be passed to the page component as props
+		props: { questions: [] } // will be passed to the page component as props
 	};
 }
 export default QuestionsPage;
