@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Flex, Text, IconButton, Divider, Avatar, Heading, useDisclosure, Button } from '@chakra-ui/react';
-import { FiBookmark, FiMenu, FiHome, FiCalendar, FiUser, FiDollarSign, FiBriefcase, FiSettings } from 'react-icons/fi';
-import { IoPawOutline } from 'react-icons/io5';
+// import { FiBookmark, FiMenu, FiHome, FiCalendar, FiUser, FiDollarSign, FiBriefcase, FiSettings } from 'react-icons/fi';
+import { QuestionIcon, ArrowRightIcon } from '@chakra-ui/icons';
 import NavItem from './NavItem';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
@@ -11,7 +11,7 @@ import CredentialComponent from '../../components/credentials';
 export default function Sidebar(props: { navSize: string; changeNavSize: (nav: string) => void }) {
 	let navItems: { href: string; title: string; description: string; icon: any }[] = [
 		// { href: '/home', title: 'Dashboard', description: '', icon: FiHome },
-		{ href: '/questions', title: 'Questions', description: '', icon: FiBookmark },
+		{ href: '/questions', title: 'Questions', description: '', icon: <ArrowRightIcon /> }
 		// { href: '/report', title: 'Report', description: '', icon: FiBriefcase }
 	];
 	let [ active, setActive ] = useState<boolean[]>([]);
@@ -51,7 +51,7 @@ export default function Sidebar(props: { navSize: string; changeNavSize: (nav: s
 					background='none'
 					mt={5}
 					_hover={{ background: 'none' }}
-					icon={<FiMenu />}
+					icon={<QuestionIcon />}
 					onClick={() => {
 						if (props.navSize == 'small') props.changeNavSize('large');
 						else props.changeNavSize('small');

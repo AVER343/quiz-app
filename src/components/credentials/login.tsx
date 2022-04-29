@@ -19,8 +19,9 @@ import {
 import { getCookieParser } from 'next/dist/server/api-utils';
 
 import { useForm, SubmitHandler } from 'react-hook-form';
-import { BsLock } from 'react-icons/bs';
-import { FiLock, FiUserPlus } from 'react-icons/fi';
+// import { BsLock } from 'react-icons/bs';
+// import { FiLock, FiUserPlus } from 'react-icons/fi';
+import {ChatIcon,LockIcon,LinkIcon} from '@chakra-ui/icons'
 import { BASE_URL } from '../../constants/url';
 import { _axios } from '../../lib/axios';
 import { useCookies } from 'react-cookie';
@@ -55,7 +56,7 @@ export default function LoginComponent({ setIsLogin }:any) {
 						<FormControl id='user_name' isRequired isInvalid={!!errors.user_name}>
 							<FormLabel>Email</FormLabel>
 							<InputGroup>
-								<InputLeftAddon children={<FiUserPlus />} />
+								<InputLeftAddon children={<ChatIcon />} />
 								<Input type='text' {...register('user_name', { required: true })} />
 							</InputGroup>
 						</FormControl>
@@ -63,7 +64,7 @@ export default function LoginComponent({ setIsLogin }:any) {
 						<FormControl id='password' isRequired isInvalid={!!errors.password}>
 							<FormLabel>Password</FormLabel>
 							<InputGroup>
-								<InputLeftAddon children={<FiLock />} />
+								<InputLeftAddon children={<LockIcon />} />
 								<Input type='password' {...register('password', { required: true })} />
 							</InputGroup>
 						</FormControl>

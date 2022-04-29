@@ -1,6 +1,6 @@
 import { Flex, Circle, Box, Badge, useColorModeValue, Icon, chakra, Tooltip } from '@chakra-ui/react';
-import { BsStar, BsStarFill, BsStarHalf } from 'react-icons/bs';
-import { FiShoppingCart } from 'react-icons/fi';
+// import { BsStar, BsStarFill, BsStarHalf } from 'react-icons/bs';
+// import { FiShoppingCart } from 'react-icons/fi';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 const data = {
@@ -21,7 +21,7 @@ interface RatingProps {
 function Rating({ rating, numReviews }: RatingProps) {
 	return (
 		<Box d='flex' alignItems='center'>
-			{Array(5).fill('').map((_, i) => {
+			{/* {Array(5).fill('').map((_, i) => {
 				const roundedRating = Math.round(rating * 2) / 2;
 				if (roundedRating - i >= 1) {
 					return (
@@ -32,7 +32,7 @@ function Rating({ rating, numReviews }: RatingProps) {
 					return <BsStarHalf key={i} style={{ marginLeft: '1' }} />;
 				}
 				return <BsStar key={i} style={{ marginLeft: '1' }} />;
-			})}
+			})} */}
 			<Box as='span' ml='2' color='gray.600' fontSize='sm'>
 				{numReviews} review{numReviews > 1 && 's'}
 			</Box>
@@ -89,9 +89,9 @@ function ProductAddToCart(props: {
 								color={'gray.800'}
 								fontSize={'1.2em'}
 							>
-								<chakra.a href={'#'} display={'flex'}>
-									<Icon as={FiShoppingCart} h={7} w={7} alignSelf={'center'} />
-								</chakra.a>
+								{/* <chakra.a href={'#'} display={'flex'}>
+									{/* <Icon as={FiShoppingCart} h={7} w={7} alignSelf={'center'} /> */}
+								{/* </chakra.a>  */}
 							</Tooltip>
 						</Flex>
 
