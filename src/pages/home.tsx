@@ -6,7 +6,7 @@ interface IProps {
 	options: string[];
 	selected: any[];
 }
-function HomePage(props) {
+function HomePage(props:any) {
 	return (
 		<React.Fragment>
 			<Head>
@@ -15,7 +15,7 @@ function HomePage(props) {
 		</React.Fragment>
 	);
 }
-export async function getServerSideProps(context) {
+export async function getServerSideProps(context:any) {
 	return {
 		props: {}
 	};
