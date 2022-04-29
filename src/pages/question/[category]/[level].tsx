@@ -7,4 +7,9 @@ const SurveyComponent = dynamic(() => import('../../../components/SurveyComponen
 const Survey = () => {
 	return <SurveyComponent />;
 };
+export async function getServerSideProps(context:any) {
+	return {
+		props: {}
+	};
+}
 export default Survey;

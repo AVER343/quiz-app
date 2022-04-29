@@ -40,5 +40,9 @@ function LevelPage() {
 		</Box>
 	);
 }
-
+export async function getServerSideProps(context:any) {
+	return {
+		props: {}
+	};
+}
 export default LevelPage;
