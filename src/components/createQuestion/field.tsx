@@ -22,7 +22,7 @@ export function FieldComponent({
 	register: (...data: any) => any;
 	validate?: any;
 }) {
-	let options = {};
+	let options: any = {};
 	if (required) {
 		options['required'] = requiredMessage;
 	}
@@ -44,7 +44,6 @@ export function FieldComponent({
 	};
 	return (
 		<FormControl isInvalid={errors[name]}>
-			{console.log({ errors })}
 			<FormLabel htmlFor={name}>{title}</FormLabel>
 			<FieldType />
 			<FormErrorMessage>{errors[name] && errors[name].message}</FormErrorMessage>

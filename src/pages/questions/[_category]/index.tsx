@@ -6,7 +6,7 @@ import { BreadCrumbComponent } from '../../../components/breadcrumb';
 function LevelPage() {
 	let router = useRouter();
 	let { _category } = router.query;
-	let [ levels, setLevel ] = useState({ EASY: 'green', MEDIUM: 'orange', HARD: 'red' });
+	let [ levels, setLevel ] = useState<{ [id: string]: any }>({ EASY: 'green', MEDIUM: 'orange', HARD: 'red' });
 	return (
 		<Box>
 			<BreadCrumbComponent

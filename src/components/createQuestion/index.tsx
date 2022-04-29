@@ -5,7 +5,7 @@ import { FieldComponent } from './field';
 
 export function CreateQuestionComponent() {
 	const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm();
-	const onSubmit = (data) => console.log({ data });
+	const onSubmit = (data: any) => console.log({ data });
 	const isValid = async (props: { [key: string]: string }) => {
 		let key = Object.keys(props)[0];
 		let res = await fetch(`${BASE_URL}/question/isvalid?${key}=${props[key]}`);
@@ -18,7 +18,7 @@ export function CreateQuestionComponent() {
 			<FieldComponent
 				name={'title'}
 				title={'Title'}
-				validate={(e) => isValid({ title: e })}
+				validate={(e: any) => isValid({ title: e })}
 				register={register}
 				errors={errors}
 			/>

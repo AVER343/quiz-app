@@ -54,7 +54,7 @@ const SurveyComponent = () => {
 					console.log(e);
 					return e;
 				})
-				.then((e) => e.map((e) => e['Question_id']))
+				.then((e) => e.map((e: any) => e['Question_id']))
 				.then((e: RootObject[]) => {
 					let pages = [
 						{
@@ -69,7 +69,7 @@ const SurveyComponent = () => {
 					e.map((e) => e.options.pages.map((e) => pages.push({ elements: e.elements })));
 					pages.push();
 					let model = new SurveyModel({
-						title: !Array.isArray(category) && category,
+						title: (!Array.isArray(category) && category) || '',
 						level: (e[0] && e[0].level) || Level.EASY,
 						pages,
 						completedHtml:
